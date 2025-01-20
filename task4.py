@@ -3,3 +3,15 @@
 # Слова во всех предложениях должны быть приведены к верхнему регистру.
 # Между словами вместо пробела ставится символ "_".
 # После записи откройте этот файл, считайте содержимое и выведите его на экран.
+
+count = int(input('Скажи кол-во строк'))
+with open('task4.txt', 'w', encoding='utf-8') as file:
+    file=file.write('')
+with open('task4.txt', 'a', encoding='utf-8') as file:
+    for i in range(count):
+        s = input()
+        s = s.replace(' ', '_')
+        s = s.upper()
+        s+='\n'
+        file.write(s)
+print(file)
