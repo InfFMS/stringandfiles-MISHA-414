@@ -7,5 +7,5 @@
 with open("task1.txt", 'r', encoding='utf-8') as f:
     f1=f.readlines()
     print(sum(1 for line in f1))
-    print(sum(line.count(' ')-line.count('—') for line in f1))
+    print(sum(line.count(' ')-3*line.count('—') for line in f1))
     print(sum(len(line) for line in f1))
